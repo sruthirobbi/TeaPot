@@ -1,0 +1,28 @@
+
+.homeScreen {
+    margin-left: 63px; /* Same as the width of the sidenav */
+
+    img{
+        height:100vh;
+        width:95.6vw;
+        top:0;
+        position: absolute;
+        z-index:-10;
+    }
+  }
+
+  .quote{
+      position: absolute;
+      top:50%;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-size:9vw;
+      left:11%;
+      color: white;
+      text-shadow: 2px 2px #ff0000;
+
+      span{
+          color:#b00303
+      }
+  }
+  

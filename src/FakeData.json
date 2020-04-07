@@ -1,0 +1,60 @@
+
+
+[
+    {
+        "id": 1,
+        "name": "Lemon Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"img2.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Green Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"img3.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Honey Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"img6.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Herbal Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"6-best-teas.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Herbal Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"6-best-teas.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Herbal Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"6-best-teas.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Herbal Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"6-best-teas.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Herbal Tea",
+        "price": 21.00,
+        "desc": "Bla bla bla bla bla",
+        "img":"6-best-teas.jpg"
+    }
+]

@@ -1,0 +1,12 @@
+@import '../../common.scss';
+.LineItems{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+
+    img{
+        width:$fifty;
+        height: $fifty;
+        border-radius: 50%;
+    }
+}
