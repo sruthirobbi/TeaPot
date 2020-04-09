@@ -1,19 +1,16 @@
-import React from 'react';
+import React,{ useContext } from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {Drawer,AppBar,Toolbar,List,CssBaseline,Typography,Divider,IconButton,ListItem,ListItemIcon,ListItemText} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import {Drawer,AppBar,Badge,Toolbar,Link,List,CssBaseline,Typography,Divider,IconButton,ListItem,ListItemIcon,ListItemText} from '@material-ui/core';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import CircleButton from '../../common/CircleButton/CircleButton';
-import backrgoundImage from '../../image/img8.jpg';
 import './Main.scss';
-import Badge from '@material-ui/core/Badge';
-import { Route, Switch,Link } from 'react-router-dom';
-import GiftScreen from '../GiftScreen/GiftScreen';
+import { Route, Switch } from 'react-router-dom';
 import TeaScreen from '../TeaScreen/TeaScreen';
 import HomeScreen from '../HomeScreen/HomeScreen';
 import Error from '../Error/Error';
 import Checkout from '../Checkout/Checkout';
-
+import {CounterContext} from '../Context/Context';
 
 
 const drawerWidth = 180;
@@ -79,8 +76,8 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
   },
   content: {
-    // flexGrow: 1,
-    // padding: theme.spacing(3),
+     flexGrow: 1,
+    padding: theme.spacing(3),
     marginTop: "64px",
   },
   listText:{
@@ -88,8 +85,11 @@ const useStyles = makeStyles((theme) => ({
   },
   rightToolbar: {
     marginLeft: 'auto',
-    marginRight: -12,
+    marginRight: "11px",
   },
+  IconButton:{
+    marginRight:"15px"
+  }
 }));
 
 const leftMenuData = [
@@ -106,12 +106,6 @@ const leftMenuData = [
         link:"/tea"
     },
     {
-        id:3,
-        textName: "Gift",
-        iconName: "gift",
-        link:"/gift"
-    },
-    {
         id:4,
         textName: "About Us",
         iconName: "comment",
@@ -122,9 +116,9 @@ const leftMenuData = [
 
 function Main() {
   const classes = useStyles();
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
+  const { state } = useContext(CounterContext);
+ 
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -133,10 +127,7 @@ function Main() {
     setOpen(false);
   };
 
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
+  const [sideDrawer, setsideDrawer] = React.useState({
     right: false,
   });
 
@@ -145,7 +136,7 @@ function Main() {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    setsideDrawer({ ...sideDrawer, [anchor]: open });
   };
 
 
@@ -175,8 +166,8 @@ function Main() {
                     Tea Pot
                 </Typography>
                 <section className={classes.rightToolbar}>
-                    <IconButton aria-label="show 4 new mails" color="inherit" onClick={toggleDrawer('right', true)}>
-                        <Badge badgeContent={4} color="secondary">
+                    <IconButton className={classes.IconButton} aria-label="show 4 new mails" color="inherit" onClick={toggleDrawer('right', true)}>
+                        <Badge badgeContent={state.count} color="secondary">
                              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                         </Badge>
                     </IconButton>
@@ -208,7 +199,7 @@ function Main() {
         <Divider />
         <List>
           {leftMenuData.map((text, index) => (
-            <Link to={text.link} key={text.id}>
+            <Link href={text.link} key={text.id} underline="none">
                 <ListItem button  index={index}>
                     <ListItemIcon>
                         <CircleButton iconName={text.iconName}/>
@@ -219,17 +210,20 @@ function Main() {
           ))}
         </List>
       </Drawer>
-      <main className={classes.content} styles={{ backgroundImage:`url(${backrgoundImage})` }}>
+      <main className={classes.content}  >
         
         <Switch>
             <Route path="/" component={HomeScreen} exact/>
             <Route path="/tea" component={TeaScreen} />
-            <Route path="/gift" component={GiftScreen}/>
             <Route component={Error}/>
         </Switch>
       </main>
 
-        <Drawer anchor={'right'} open={state['right']} onClose={toggleDrawer('right', false)}>
+        <Drawer 
+                anchor={'right'} 
+                open={sideDrawer['right']} 
+                onClose={toggleDrawer('right', false)}
+                >
             <Checkout/>
         </Drawer>
         

@@ -3,10 +3,7 @@
     width:100%;
     display: flex;
     justify-content: space-around;
-
-    img{
-        width:$fifty;
-        height: $fifty;
-        border-radius: 50%;
-    }
+    vertical-align: middle;
+    line-height: 40px;
+    padding: 5px 10px;
 }

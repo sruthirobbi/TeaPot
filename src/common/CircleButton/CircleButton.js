@@ -2,6 +2,7 @@ import React from 'react';
 import './CircleButton.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+
 function CircleButton(props){
     return(
         

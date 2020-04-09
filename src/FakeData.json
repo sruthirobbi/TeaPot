@@ -3,58 +3,58 @@
 [
     {
         "id": 1,
-        "name": "Lemon Tea",
+        "name": "Hibiscus Tea",
         "price": 21.00,
         "desc": "Bla bla bla bla bla",
-        "img":"img2.jpg"
+        "img":"HibiscusTea.jpg"
     },
     {
         "id": 2,
-        "name": "Green Tea",
-        "price": 21.00,
+        "name": "Herbal Tea",
+        "price": 23.00,
         "desc": "Bla bla bla bla bla",
-        "img":"img3.jpg"
+        "img":"masala__tea.jpg"
     },
     {
         "id": 3,
-        "name": "Honey Tea",
-        "price": 21.00,
+        "name": "Matcha tea",
+        "price": 26.00,
         "desc": "Bla bla bla bla bla",
-        "img":"img6.jpg"
+        "img":"matcha_tea.jpg"
     },
     {
         "id": 4,
-        "name": "Herbal Tea",
-        "price": 21.00,
+        "name": "Ginger Tea",
+        "price": 19.00,
         "desc": "Bla bla bla bla bla",
-        "img":"6-best-teas.jpg"
+        "img":"termaric_ginger_tea.jpg"
     },
     {
         "id": 5,
-        "name": "Herbal Tea",
-        "price": 21.00,
-        "desc": "Bla bla bla bla bla",
-        "img":"6-best-teas.jpg"
+        "name": "White Tea",
+        "price": 20.00,
+        "desc": "100% organic, hand plucked and shade dried whole leaf silver needle white tea",
+        "img":"white_tea.jpg"
     },
     {
         "id": 6,
-        "name": "Herbal Tea",
-        "price": 21.00,
-        "desc": "Bla bla bla bla bla",
-        "img":"6-best-teas.jpg"
+        "name": "Black Tea",
+        "price": 15.00,
+        "desc": "This Fair Trade Certified organic tea blend makes the perfect breakfast tea, with a nice medium-body and a full organic black tea flavor ",
+        "img":"black_tea.jpg"
     },
     {
         "id": 7,
-        "name": "Herbal Tea",
-        "price": 21.00,
-        "desc": "Bla bla bla bla bla",
-        "img":"6-best-teas.jpg"
+        "name": "Peppermint Tea",
+        "price": 24.00,
+        "desc": "A refreshing peppermint tea with organic peppermint leafs. Naturally caffeine free, it's good for any time of the day.",
+        "img":"peppermint_tea.jpg"
     },
     {
         "id": 8,
-        "name": "Herbal Tea",
+        "name": "Yellow Tea",
         "price": 21.00,
         "desc": "Bla bla bla bla bla",
-        "img":"6-best-teas.jpg"
+        "img":"yellow_tea.jpg"
     }
 ]

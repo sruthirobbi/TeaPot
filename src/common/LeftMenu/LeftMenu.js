@@ -9,7 +9,6 @@ function LeftMenu(){
             <ul className="menuList">
                 <Link to="/"><CircleButton iconName="home"/></Link>
                 <Link to="/tea"><CircleButton iconName="coffee"/></Link>
-                <Link to="/gift"><CircleButton iconName="gift"/></Link>
                 <Link to="/user"><CircleButton iconName="user"/></Link>
                 <Link to="/comment"><CircleButton iconName="comment"/></Link>
             </ul>   

@@ -1,28 +1,32 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Grid from '@material-ui/core/Grid';
 import data from '../../FakeData.json';
 import Button from '@material-ui/core/Button';
 import './TeaScreen.scss'
+import {CounterContext} from '../Context/Context';
+
+
 
 
 function TeaScreen() {
- 
+  const { dispatch } = useContext(CounterContext);
 
   return (
-    <div className="TeaScreen">
-      <Grid container spacing={2}>
-        <Grid item sm={12}>
-          <Grid container justify="center" spacing={2}>
+      <Grid container className="TeaScreen" spacing={2} justify="center">
             {data.map((list,index)=>
-              <Grid item key={list.id} index={index} sm={3}>
-                <img className="productImage" src={require(`../../image/${list.img}`)}/>
-                <Button variant="contained" color="secondary">Add To Cart</Button>
+              <Grid item className="item" key={list.id} index={index}  xs={12} sm={3} md={3} >
+                <img className="productImage" alt={list.name} src={require(`../../image/${list.img}`)}/>
+                
+                <div className="productPrice" >${list.price}</div>
+                <div className="productName">{list.name}</div>
+                <div><Button 
+                          variant="contained" 
+                          color="secondary"
+                          onClick={() => dispatch({ type: "onclick",product:list })}
+                          >Add To Cart</Button></div>
               </Grid>
             )}
-          </Grid>
-        </Grid>
       </Grid>
-    </div>
   );
 }
 
