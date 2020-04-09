@@ -32,10 +32,6 @@ function Checkout(){
             {state.items.length === 0? message() : state.items.map((item,index)=>(
                 <LineItems itemName={item.name} price={item.price} img={item.img} key={index}/>
             ))}
-
-            {/* {state.items.map((item,index)=>(
-                <LineItems itemName={item.name} price={item.price} img={item.img} key={index}/>
-            ))} */}
             
             <Button 
                     variant="contained" 
