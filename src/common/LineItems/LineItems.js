@@ -15,7 +15,7 @@ function LineItems(props){
             <span>{props.itemName}</span>
             <span  onClick={() => dispatch({ type: "onclick_plus",product:props.itemName,id:props.id })}><i className="fa fa-plus" aria-hidden="true"></i></span>
             <span>{props.quantity}</span>
-            <span><i className="fa fa-minus" aria-hidden="true"></i></span>
+            <span onClick={() => dispatch({ type: "onclick_minus",product:props.itemName,id:props.id })}><i className="fa fa-minus" aria-hidden="true"></i></span>
             <span> ${props.price}</span>
         </div>
     )

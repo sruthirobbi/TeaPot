@@ -23,7 +23,7 @@ function message(){
 
 function Checkout(){
     const { state } = useContext(CounterContext);
-   console.log("checkout", state)
+   
     return(
         <div className="Checkout">
            
