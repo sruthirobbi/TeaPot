@@ -23,14 +23,21 @@ function message(){
 
 function Checkout(){
     const { state } = useContext(CounterContext);
-   
+   console.log("checkout", state)
     return(
         <div className="Checkout">
            
             <Title title="Checkout Summary"/>
             
             {state.items.length === 0? message() : state.items.map((item,index)=>(
-                <LineItems itemName={item.name} price={item.price} img={item.img} key={index}/>
+                <LineItems 
+                            itemName={item.name} 
+                            price={item.price} 
+                            img={item.img} 
+                            key={index} 
+                            id={item.id}
+                            quantity={item.quantity}
+                            />
             ))}
             
             <Button 

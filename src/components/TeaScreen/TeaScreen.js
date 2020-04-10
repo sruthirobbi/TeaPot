@@ -22,7 +22,7 @@ function TeaScreen() {
                 <div><Button 
                           variant="contained" 
                           color="secondary"
-                          onClick={() => dispatch({ type: "onclick",product:list })}
+                          onClick={() => dispatch({ type: "onclick_cart",product:list,id:list.id })}
                           >Add To Cart</Button></div>
               </Grid>
             )}
