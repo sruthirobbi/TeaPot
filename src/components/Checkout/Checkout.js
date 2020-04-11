@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import Title from '../../common/Title/Title';
 import LineItems from '../../common/LineItems/LineItems';
-import Button from '@material-ui/core/Button';
+import {Button, Divider} from '@material-ui/core';
 import './Checkout.scss';
 import {CounterContext} from '../Context/Context';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -39,7 +39,8 @@ function Checkout(){
                             quantity={item.quantity}
                             />
             ))}
-            
+            <Divider />
+            <span>Total : </span>
             <Button 
                     variant="contained" 
                     color="secondary" 

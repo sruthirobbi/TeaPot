@@ -1,8 +1,8 @@
 import React,{useReducer} from 'react';
 
-    const addItems = (items = [], payload) => {
-        const newItems = items.map(item => item);
-          newItems.push(payload);
+    const addItems = (items = [], payload,id) => {
+        const newItems =  items.map(item => item);
+         newItems.push(payload);
         return newItems;
     };
 
@@ -19,37 +19,36 @@ import React,{useReducer} from 'react';
 
   const removeQuantity = (items = [],id)=>{
     const newItems = items.map(item => item);
-    newItems.map(((e,index)=>{ 
-        // return (e.id === id && e.quantity >= 1 ) ? e.quantity = e.quantity - 1 : (e.quantity === 0) ? newItems.splice(index,1) : ' '
-        if(e.id === id && e.quantity >= 1){ e.quantity = e.quantity - 1}
+    newItems.map(((e,index)=>{ return e.id === id && e.quantity >= 2 ? e.quantity = e.quantity - 1 
+                                      : (e.id === id && (e.quantity === 0 || e.quantity === 1)) ? newItems.splice(index,1) 
+                                      : ' '
+        // if(e.id === id && e.quantity >= 1){
+        //     e.quantity = e.quantity - 1;
+        // }
 
-        if(e.quantity === 0){ const newList = newItems.splice(index,1); return newList}
+        // if(e.quantity === 0){
+        //   const newList = newItems.splice(index,1)
+        //   return newList
+        // }
     }))
-
+    
     return newItems
   }
 
-  const newCount = (items = []) =>{
-    const newCountLen = items.length;
-    return newCountLen;
-  }
-
-
+  
 let reducer = (state, action) => {
 
     switch (action.type) {
       case "onclick_cart":
         return { ...state,
             count: state.count + 1,
-            items: addItems(state.items, action.product) };
+            items: addItems(state.items, action.product,action.id) };
       case "onclick_plus":
         return{...state,
           items: addQuantity(state.items,action.id)
         };
       case "onclick_minus":
-          const newListCount = removeQuantity(state.items,action.id)
         return{...state,
-          count: newCount(newListCount),
           items: removeQuantity(state.items,action.id)
         };
       default:
@@ -68,7 +67,7 @@ const CounterContext = React.createContext(null);
 function CounterProvider(props){
 
     const [state, dispatch] = useReducer(reducer, initialState);
- 
+    console.log(state)
     return(
         <CounterContext.Provider value={{ state, dispatch }}>
             {props.children}
