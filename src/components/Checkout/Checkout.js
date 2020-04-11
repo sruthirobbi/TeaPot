@@ -23,7 +23,6 @@ function message(){
 
 function Checkout(){
     const { state } = useContext(CounterContext);
-   
     return(
         <div className="Checkout">
            
@@ -40,7 +39,7 @@ function Checkout(){
                             />
             ))}
             <Divider />
-            <span>Total : </span>
+            <div className="TotalAmount">Total : {state.total}</div>
             <Button 
                     variant="contained" 
                     color="secondary" 
