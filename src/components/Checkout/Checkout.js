@@ -39,7 +39,7 @@ function Checkout(){
                             />
             ))}
             <Divider />
-            <div className="TotalAmount">Total : {state.total}</div>
+            <div className="TotalAmount">Total : ${state.total}</div>
             <Button 
                     variant="contained" 
                     color="secondary" 

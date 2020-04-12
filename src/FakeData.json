@@ -20,7 +20,7 @@
     {
         "id": 3,
         "name": "Matcha tea",
-        "price": 26.00,
+        "price": 25.00,
         "desc": "Bla bla bla bla bla",
         "img":"matcha_tea.jpg",
         "quantity":1

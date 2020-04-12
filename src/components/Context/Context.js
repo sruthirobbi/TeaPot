@@ -1,13 +1,21 @@
 import React,{useReducer} from 'react';
 
+  //TO add Items to Cart
   const addItems = (items = [], payload,id) => {
-        const newItems =  items.map(item => item);
-         newItems.push(payload);
-        return newItems;
+        let check = items.some( item => item.id === id);
+        check === true ? payload.quantity = payload.quantity + 1 : items.push(payload)  
+        return items;
   };
 
 
-  const incQuantity = (items = [], id,total,product)=>{
+  const cartCount = (items = [], id,count) =>{
+    let check = items.some( item => item.id === id);
+        check === true ? count = count : count = count + 1  
+        return count;
+  }
+
+  //To Increase Quantity of each item
+  const incQuantity = (items = [],payload, id)=>{
     const newItems = items.map(item => item);
     const isOnTheList = !newItems.includes(id)
     if(isOnTheList){
@@ -16,10 +24,15 @@ import React,{useReducer} from 'react';
     return newItems
   }
 
-  const newCount = (list) =>{
-    return list.length;
+  //To get newCount value when inc and dec the items in the cart
+  const newCount = (items = [],id,count) =>{
+    const newItems = items.map(item => item);
+    newItems.map((e)=>{ return  (e.id === id && (e.quantity === 0 || e.quantity === 1)) ? count = count-1 : ' '
+    });
+    return count
   }
 
+  //To decrease the Quantity of the each item and to remove the item if Quantity is 1
   const decQuantity = (items = [],id)=>{
     const newItems = items.map(item => item);
     newItems.map((e,index)=>{ return e.id === id && e.quantity >= 2 ? e.quantity = e.quantity - 1 
@@ -29,13 +42,15 @@ import React,{useReducer} from 'react';
     return newItems
   }
 
-  const cartTotal = (items = [], payload, id)=>{
+  //To display the Total amount of the Cart
+  const cartTotal = (items = [],id, payload)=>{
     const newItems = items.map(item => item);
-    newItems.push(payload);
-    const newValue =  newItems.map(item => item.price).reduce((prev, next) => prev + next);
-    return newValue
+    const newValue = newItems.map(item => item.price * item.quantity);
+    const Total = newValue.reduce((prev, next) => prev + next)
+    return Total
   }
   
+  //To decrease the Total value of the cart when dec Item Quantity
   const decItemsTotal = (items= [],id,total)=>{
     const newItems = items.map(item => item);
     const subValue = newItems.map(e=>{return e.id ===id ? e.price: 0});
@@ -43,6 +58,7 @@ import React,{useReducer} from 'react';
     return newSub;
   }
 
+  //To inc the Total value of the cart when inc Item Quantity
   const incItemsTotal = (items=[],id,total)=>{
     const newItems = items.map(item => item);
     const checkQuan = newItems.map(e=>{return (e.id===id &&e.quantity>1) ? (total = total + e.price) : 0})
@@ -54,23 +70,19 @@ let reducer = (state, action) => {
 
     switch (action.type) {
       case "onclick_cart":
+        
         return { ...state,
-            count: state.count + 1,
-            items: addItems(state.items, action.product,action.id) ,
-            total: cartTotal(state.items, action.product, action.id)};
+            count: cartCount(state.items,action.id,state.count),
+            items: addItems(state.items, action.product,action.id),
+            total: cartTotal(state.items,action.id, action.product)};
       case "onclick_plus":
         return{...state,
-          items: incQuantity(state.items,action.id),
+          items: incQuantity(state.items,action.product,action.id),
           total:incItemsTotal(state.items,action.id,state.total)
         };
       case "onclick_minus":
-        console.log("state.total",state.total)
-        console.log("sub",state.total - state.items.price)
-
-       
-
         return{...state,
-          count: newCount(state.items),
+          count: newCount(state.items,action.id,state.count),
           items: decQuantity(state.items,action.id),
           total: decItemsTotal(state.items,action.id,state.total)
         };
