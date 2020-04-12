@@ -7,12 +7,11 @@ import React,{useReducer} from 'react';
   };
 
 
-  const addQuantity = (items = [], id)=>{
+  const incQuantity = (items = [], id,total,product)=>{
     const newItems = items.map(item => item);
     const isOnTheList = !newItems.includes(id)
     if(isOnTheList){
-      newItems.map((e)=> { return e.id === id ? ((e.quantity= e.quantity + 1) ) : ' ' })
-      
+      newItems.map((e)=> { return e.id === id ? (e.quantity= e.quantity + 1) : ' ' })
     }
     return newItems
   }
@@ -21,7 +20,7 @@ import React,{useReducer} from 'react';
     return list.length;
   }
 
-  const removeQuantity = (items = [],id)=>{
+  const decQuantity = (items = [],id)=>{
     const newItems = items.map(item => item);
     newItems.map((e,index)=>{ return e.id === id && e.quantity >= 2 ? e.quantity = e.quantity - 1 
                                       : (e.id === id && (e.quantity === 0 || e.quantity === 1)) ? newItems.splice(index,1) 
@@ -37,11 +36,17 @@ import React,{useReducer} from 'react';
     return newValue
   }
   
-  const subTotal = (items= [],id,total)=>{
+  const decItemsTotal = (items= [],id,total)=>{
     const newItems = items.map(item => item);
     const subValue = newItems.map(e=>{return e.id ===id ? e.price: 0});
     const newSub = total - subValue.find(e=>e>1);
     return newSub;
+  }
+
+  const incItemsTotal = (items=[],id,total)=>{
+    const newItems = items.map(item => item);
+    const checkQuan = newItems.map(e=>{return (e.id===id &&e.quantity>1) ? (total = total + e.price) : 0})
+    return total
   }
 
 
@@ -55,7 +60,8 @@ let reducer = (state, action) => {
             total: cartTotal(state.items, action.product, action.id)};
       case "onclick_plus":
         return{...state,
-          items: addQuantity(state.items,action.id)
+          items: incQuantity(state.items,action.id),
+          total:incItemsTotal(state.items,action.id,state.total)
         };
       case "onclick_minus":
         console.log("state.total",state.total)
@@ -65,8 +71,8 @@ let reducer = (state, action) => {
 
         return{...state,
           count: newCount(state.items),
-          items: removeQuantity(state.items,action.id),
-          total: subTotal(state.items,action.id,state.total)
+          items: decQuantity(state.items,action.id),
+          total: decItemsTotal(state.items,action.id,state.total)
         };
       default:
         return state;
