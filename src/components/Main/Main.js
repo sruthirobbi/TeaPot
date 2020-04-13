@@ -11,6 +11,7 @@ import HomeScreen from '../HomeScreen/HomeScreen';
 import Error from '../Error/Error';
 import Checkout from '../Checkout/Checkout';
 import {CounterContext} from '../Context/Context';
+import SignIn from '../SignIn/SignIn';
 
 
 const drawerWidth = 180;
@@ -139,6 +140,9 @@ function Main() {
     setsideDrawer({ ...sideDrawer, [anchor]: open });
   };
 
+  const closeDrawer = (anchor,open) => ()=>{
+    setsideDrawer({ ...sideDrawer, [anchor]: open });
+  }
 
 
   return (
@@ -215,6 +219,7 @@ function Main() {
         <Switch>
             <Route path="/" component={HomeScreen} exact/>
             <Route path="/tea" component={TeaScreen} />
+            <Route path="/SignIn" component={SignIn}/>
             <Route component={Error}/>
         </Switch>
       </main>
@@ -224,7 +229,7 @@ function Main() {
                 open={sideDrawer['right']} 
                 onClose={toggleDrawer('right', false)}
                 >
-            <Checkout/>
+            <Checkout onclose={closeDrawer('right',false)}/>
         </Drawer>
         
       

@@ -3,7 +3,7 @@ import './Title.scss'
 
 function Title(props){
     return(
-        <div className="subTitles">
+        <div className="subTitles" style={{ fontSize:props.fontsize }}>
             {props.title}
         </div>
     )

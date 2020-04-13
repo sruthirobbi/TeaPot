@@ -5,6 +5,7 @@ import {Button, Divider} from '@material-ui/core';
 import './Checkout.scss';
 import {CounterContext} from '../Context/Context';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Link } from 'react-router-dom';
 
 function message(){
 
@@ -21,12 +22,18 @@ function message(){
 }
 
 
-function Checkout(){
+
+
+function Checkout(props){
     const { state } = useContext(CounterContext);
+    
+    
     return(
-        <div className="Checkout">
-           
-            <Title title="Checkout Summary"/>
+        <div className="Checkout" >
+            <div className="closeDrawer" onClick={props.onclose} >
+                <i className="fa fa-times fa-xs" aria-hidden="true"></i>
+            </div>
+            <Title title="Checkout Summary" fontsize="45px"/>
             
             {state.items.length === 0? message() : state.items.map((item,index)=>(
                 <LineItems 
@@ -40,12 +47,16 @@ function Checkout(){
             ))}
             <Divider />
             <div className="TotalAmount">Total : ${state.total}</div>
-            <Button 
+            
+            <Link to="/SignIn">
+                <Button 
                     variant="contained" 
                     color="secondary" 
                     size="large" 
                     fullWidth
-            >Checkout</Button>
+                    onClick={props.onclose}
+                >Proceed to Checkout</Button>
+            </Link>
         </div>
     )
 }

@@ -1,4 +1,21 @@
+@import '../../common.scss';
+
 .Checkout{
+
+    .closeDrawer{
+        float: right;
+        width: 20px;
+        padding: 4px 6px;
+        height: 20px;
+        margin-top: 9px;
+        background-color: $darkColor;
+        cursor: pointer;
+        color: white;
+        margin-right: 27px;
+        border-radius: 50%;
+        line-height: 11px;
+
+    }
     Button{
         position:absolute;
         top:90%;
