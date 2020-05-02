@@ -1,29 +1,37 @@
 @import '../../common.scss';
 
-.Checkout{
+.Checkout-container{
 
-    .closeDrawer{
+    .Checkout-closeDrawer{
         float: right;
-        width: 20px;
         padding: 4px 6px;
-        height: 20px;
         margin-top: 9px;
         background-color: $darkColor;
         cursor: pointer;
-        color: white;
+        color: $white;
         margin-right: 27px;
         border-radius: 50%;
         line-height: 11px;
+        @include dimensions(20px,20px);
 
     }
     Button{
         position:absolute;
         top:90%;
     }
-    .TotalAmount{
-        font-size: 18px;
+    .Checkout-TotalAmount{
+        font-size: $subTitle;
         float: right;
         margin-right: 20px;
-        padding: 10px;
+        padding: $padding5px*2;
+    }
+
+    .checkout-title{
+        display: inline;
+        padding: $padding5px*2 $padding8px*2;
+        
+        .subTitles{
+            @include display(inline)
+        }
     }
 }

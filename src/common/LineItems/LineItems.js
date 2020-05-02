@@ -1,6 +1,5 @@
 import React,{useContext} from 'react';
 import './LineItems.scss';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import Avatar from '@material-ui/core/Avatar';
 import {CounterContext} from '../../components/Context/Context';
 

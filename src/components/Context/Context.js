@@ -67,10 +67,9 @@ import React,{useReducer} from 'react';
 
 
 let reducer = (state, action) => {
-
+  console.log(state)
     switch (action.type) {
       case "onclick_cart":
-        
         return { ...state,
             count: cartCount(state.items,action.id,state.count),
             items: addItems(state.items, action.product,action.id),

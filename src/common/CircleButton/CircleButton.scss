@@ -3,8 +3,7 @@
 .circleButton{
     text-align: center;
 	float: left;
-	width: $fifty;
-	height: $fifty;
+	@include dimensions(50px,50px);
 	border: 1px solid $darkColor;
 	border-radius: 100%;
     margin-right: 7px; 
@@ -15,7 +14,7 @@
   
     
     i{
-        font-size: 20px;
+        font-size: $mainTitle - 4px;
         line-height: $fifty;
         color: $white;
     }

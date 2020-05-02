@@ -1,8 +1,8 @@
 import React,{ useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import {Drawer,AppBar,Badge,Toolbar,Link,List,CssBaseline,Typography,Divider,IconButton,ListItem,ListItemIcon,ListItemText} from '@material-ui/core';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import {Drawer,AppBar,Badge,Toolbar,List,CssBaseline,Typography,Divider,IconButton,ListItem,ListItemIcon,ListItemText} from '@material-ui/core';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
 import CircleButton from '../../common/CircleButton/CircleButton';
 import './Main.scss';
 import { Route, Switch } from 'react-router-dom';
@@ -12,6 +12,12 @@ import Error from '../Error/Error';
 import Checkout from '../Checkout/Checkout';
 import {CounterContext} from '../Context/Context';
 import SignIn from '../SignIn/SignIn';
+import Register from '../Auth/Register';
+import AboutUs from '../AboutUs/AboutUs';
+import { Link } from 'react-router-dom';
+import Footer from '../../common/Footer/Footer';
+import Billing from '../Billing/Billing';
+import ContactUs from '../ContactUs/ContactUs';
 
 
 const drawerWidth = 180;
@@ -90,6 +96,13 @@ const useStyles = makeStyles((theme) => ({
   },
   IconButton:{
     marginRight:"15px"
+  },
+  anchor:{
+    color:"white"
+  },
+  logo:{
+    textDecoration:"none",
+    color:"white"
   }
 }));
 
@@ -107,18 +120,26 @@ const leftMenuData = [
         link:"/tea"
     },
     {
-        id:4,
+        id:3,
         textName: "About Us",
-        iconName: "comment",
-        link:"/about"
-    }
+        iconName: "users",
+        link:"/AboutUs"
+    },
+    {
+        id:4,
+        textName: "Contact",
+        iconName: "hourglass-half",
+        link:"/ContactUs"
+  }
 ]
 
 
 function Main() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  
   const { state } = useContext(CounterContext);
+
  
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -166,18 +187,24 @@ function Main() {
                 >
                     <i className="fa fa-bars" aria-hidden="true"></i>
                 </IconButton>
+                <Link to={'/'} className={classes.logo}>
                 <Typography variant="h6" noWrap>
                     Tea Pot
                 </Typography>
+                </Link>
                 <section className={classes.rightToolbar}>
                     <IconButton className={classes.IconButton} aria-label="show 4 new mails" color="inherit" onClick={toggleDrawer('right', true)}>
                         <Badge badgeContent={state.count} color="secondary">
                              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                         </Badge>
                     </IconButton>
-                    <IconButton  color="inherit">
-                            <i className="fa fa-user" aria-hidden="true"></i>
-                    </IconButton>
+                    
+                      <IconButton  color="inherit">
+                            <Link to={'/SignIn'} className={classes.anchor}>
+                              <i className="fa fa-user" aria-hidden="true"></i>
+                            </Link>
+                      </IconButton>
+                    
                 </section>
             </Toolbar>
         </AppBar>
@@ -203,7 +230,7 @@ function Main() {
         <Divider />
         <List>
           {leftMenuData.map((text, index) => (
-            <Link href={text.link} key={text.id} underline="none">
+            <Link to={text.link} key={text.id} underline="none">
                 <ListItem button  index={index}>
                     <ListItemIcon>
                         <CircleButton iconName={text.iconName}/>
@@ -220,6 +247,12 @@ function Main() {
             <Route path="/" component={HomeScreen} exact/>
             <Route path="/tea" component={TeaScreen} />
             <Route path="/SignIn" component={SignIn}/>
+            <Route path="/Register" component={Register}/>
+            <Route path="/AboutUs" component={AboutUs}/>
+            <Route path="/Billing" component={Billing}/>
+            <Route path="/ContactUs" component={ContactUs}/>
+            
+
             <Route component={Error}/>
         </Switch>
       </main>
@@ -231,7 +264,7 @@ function Main() {
                 >
             <Checkout onclose={closeDrawer('right',false)}/>
         </Drawer>
-        
+        <Footer/>
       
     </div>
   );

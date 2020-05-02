@@ -4,8 +4,8 @@ import LineItems from '../../common/LineItems/LineItems';
 import {Button, Divider} from '@material-ui/core';
 import './Checkout.scss';
 import {CounterContext} from '../Context/Context';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Link } from 'react-router-dom';
+import TeaSvg from '../../common/TeaSvg/TeaSvg';
 
 function message(){
 
@@ -22,18 +22,18 @@ function message(){
 }
 
 
-
-
 function Checkout(props){
     const { state } = useContext(CounterContext);
     
-    
     return(
-        <div className="Checkout" >
-            <div className="closeDrawer" onClick={props.onclose} >
+        <div className="Checkout-container" >
+            <div className="Checkout-closeDrawer" onClick={props.onclose} >
                 <i className="fa fa-times fa-xs" aria-hidden="true"></i>
             </div>
-            <Title title="Checkout Summary" fontsize="45px"/>
+            <div className="checkout-title">
+                <Title title="Checkout Summary" fontsize="30px"/> 
+                <TeaSvg/>
+            </div>
             
             {state.items.length === 0? message() : state.items.map((item,index)=>(
                 <LineItems 
@@ -46,14 +46,16 @@ function Checkout(props){
                             />
             ))}
             <Divider />
-            <div className="TotalAmount">Total : ${state.total}</div>
+            <div className="Checkout-TotalAmount">Total : ${state.total}</div>
+
             
-            <Link to="/SignIn">
+            <Link to="/SignIn" >
                 <Button 
                     variant="contained" 
                     color="secondary" 
                     size="large" 
                     fullWidth
+                    disabled = {state.count === 0 ? true:false}
                     onClick={props.onclose}
                 >Proceed to Checkout</Button>
             </Link>

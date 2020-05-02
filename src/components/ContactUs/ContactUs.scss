@@ -1,7 +1,10 @@
 @import '../../common.scss';
-.SignIn-title{
+
+.ContactUs-title{
     .subTitles{
         @include display(inline)
     }
-    
+}
+.ContactUs-maps{
+    position: relative;
 }

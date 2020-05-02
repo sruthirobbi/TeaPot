@@ -1,5 +1,3 @@
-
-
 [
     {
         "id": 1,
@@ -51,7 +49,7 @@
     },
     {
         "id": 7,
-        "name": "Peppermint Tea",
+        "name": "Mint Tea",
         "price": 24.00,
         "desc": "A refreshing peppermint tea with organic peppermint leafs. Naturally caffeine free, it's good for any time of the day.",
         "img":"peppermint_tea.jpg",

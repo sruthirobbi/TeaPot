@@ -1,16 +1,16 @@
 @import '../../common.scss';
+
 .LineItems{
     width:100%;
-    display: flex;
+    @include display(flex);
     justify-content: space-around;
     vertical-align: middle;
     line-height: 40px;
-    padding: 5px 10px;
+    padding: $padding5px $padding5px*2;
 
     .operButton{
-        width:20px;
-        height: 20px;
-        font-size:14px;
+        @include dimensions(20px,20px);
+        font-size:$subTitle - 4px;
         margin-top: 9px;
         background-color: $darkColor;
         cursor:pointer
