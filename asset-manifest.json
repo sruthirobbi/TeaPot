@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Tea-Pot-Project/static/css/main.5b41886a.chunk.css",
+    "main.js": "/Tea-Pot-Project/static/js/main.ecc17cc1.chunk.js",
+    "main.js.map": "/Tea-Pot-Project/static/js/main.ecc17cc1.chunk.js.map",
+    "runtime-main.js": "/Tea-Pot-Project/static/js/runtime-main.d07ba634.js",
+    "runtime-main.js.map": "/Tea-Pot-Project/static/js/runtime-main.d07ba634.js.map",
+    "static/js/2.84a3a5ab.chunk.js": "/Tea-Pot-Project/static/js/2.84a3a5ab.chunk.js",
+    "static/js/2.84a3a5ab.chunk.js.map": "/Tea-Pot-Project/static/js/2.84a3a5ab.chunk.js.map",
+    "index.html": "/Tea-Pot-Project/index.html",
+    "precache-manifest.37e8c84fa31f273c8118b25305dd6077.js": "/Tea-Pot-Project/precache-manifest.37e8c84fa31f273c8118b25305dd6077.js",
+    "service-worker.js": "/Tea-Pot-Project/service-worker.js",
+    "static/css/main.5b41886a.chunk.css.map": "/Tea-Pot-Project/static/css/main.5b41886a.chunk.css.map",
+    "static/js/2.84a3a5ab.chunk.js.LICENSE.txt": "/Tea-Pot-Project/static/js/2.84a3a5ab.chunk.js.LICENSE.txt",
+    "static/media/HibiscusTea.jpg": "/Tea-Pot-Project/static/media/HibiscusTea.cb17b476.jpg",
+    "static/media/black_tea.jpg": "/Tea-Pot-Project/static/media/black_tea.1b34f06a.jpg",
+    "static/media/img8.jpg": "/Tea-Pot-Project/static/media/img8.6bc33a1f.jpg",
+    "static/media/masala__tea.jpg": "/Tea-Pot-Project/static/media/masala__tea.0e4a3eb4.jpg",
+    "static/media/matcha_tea.jpg": "/Tea-Pot-Project/static/media/matcha_tea.78c07501.jpg",
+    "static/media/peppermint_tea.jpg": "/Tea-Pot-Project/static/media/peppermint_tea.f59fa3e0.jpg",
+    "static/media/tea-amillionstyles.jpg": "/Tea-Pot-Project/static/media/tea-amillionstyles.eacca5ed.jpg",
+    "static/media/termaric_ginger_tea.jpg": "/Tea-Pot-Project/static/media/termaric_ginger_tea.2e9ea7a5.jpg",
+    "static/media/typeOfTea1.jpg": "/Tea-Pot-Project/static/media/typeOfTea1.eacca5ed.jpg",
+    "static/media/typeOfTea2.jpg": "/Tea-Pot-Project/static/media/typeOfTea2.e9a0d91a.jpg",
+    "static/media/typeOfTea3.jpg": "/Tea-Pot-Project/static/media/typeOfTea3.e9a0d91a.jpg",
+    "static/media/typeOfTea4.jpg": "/Tea-Pot-Project/static/media/typeOfTea4.a8766062.jpg",
+    "static/media/types-of-tea.jpg": "/Tea-Pot-Project/static/media/types-of-tea.e9a0d91a.jpg",
+    "static/media/white_tea.jpg": "/Tea-Pot-Project/static/media/white_tea.2c1c7066.jpg",
+    "static/media/yellow_tea.jpg": "/Tea-Pot-Project/static/media/yellow_tea.48b550b8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d07ba634.js",
+    "static/js/2.84a3a5ab.chunk.js",
+    "static/css/main.5b41886a.chunk.css",
+    "static/js/main.ecc17cc1.chunk.js"
+  ]
+}
