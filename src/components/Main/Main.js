@@ -114,7 +114,7 @@ const leftMenuData = [
         id:1,
         textName: "Home",
         iconName: "home",
-        link:'/home'
+        link:'/'
     },
     {
         id:2,
@@ -190,7 +190,7 @@ function Main() {
                 >
                     <i className="fa fa-bars" aria-hidden="true"></i>
                 </IconButton>
-                <Link to={'/home'} className={classes.logo}>
+                <Link to={'/'} className={classes.logo}>
                 <Typography variant="h6" noWrap>
                     Tea Pot
                 </Typography>
@@ -247,7 +247,7 @@ function Main() {
       <main className={classes.content}  >
         
         <Switch>
-            <Route path="/home" component={HomeScreen} exact/>
+            <Route path="/" component={HomeScreen} exact/>
             <Route path="/tea" component={TeaScreen} />
             <Route path="/SignIn" component={SignIn}/>
             <Route path="/Register" component={Register}/>
