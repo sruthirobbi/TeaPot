@@ -190,7 +190,7 @@ function Main() {
                 >
                     <i className="fa fa-bars" aria-hidden="true"></i>
                 </IconButton>
-                <Link to={'/'} className={classes.logo}>
+                <Link to={'/home'} className={classes.logo}>
                 <Typography variant="h6" noWrap>
                     Tea Pot
                 </Typography>
