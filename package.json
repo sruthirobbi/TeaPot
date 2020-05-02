@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sruthirobbi.github.io/TeaPot/",
+  "homepage": "https://sruthirobbi.github.io/TeaPot",
   "dependencies": {
     "@material-ui/core": "^4.9.11",
     "@stripe/react-stripe-js": "^1.1.2",

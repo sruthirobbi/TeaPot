@@ -114,7 +114,7 @@ const leftMenuData = [
         id:1,
         textName: "Home",
         iconName: "home",
-        link:'/'
+        link:'/home'
     },
     {
         id:2,
@@ -247,7 +247,7 @@ function Main() {
       <main className={classes.content}  >
         
         <Switch>
-            <Route path="/" component={HomeScreen} exact/>
+            <Route path="/home" component={HomeScreen} exact/>
             <Route path="/tea" component={TeaScreen} />
             <Route path="/SignIn" component={SignIn}/>
             <Route path="/Register" component={Register}/>
