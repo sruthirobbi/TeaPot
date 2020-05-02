@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f7eebfc04858900bfa5ddafec41b0cc",
+    "revision": "700891af0cce93d18974656b84fc473b",
     "url": "/TeaPot/index.html"
   },
   {
-    "revision": "d9bbf92fa29592ad6159",
+    "revision": "f10ead4e3db8d5a93838",
     "url": "/TeaPot/static/css/main.5b41886a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TeaPot/static/js/2.84a3a5ab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d9bbf92fa29592ad6159",
-    "url": "/TeaPot/static/js/main.e2b7cbd0.chunk.js"
+    "revision": "f10ead4e3db8d5a93838",
+    "url": "/TeaPot/static/js/main.ecc17cc1.chunk.js"
   },
   {
     "revision": "8890ba0a64f7d92cfaa8",
