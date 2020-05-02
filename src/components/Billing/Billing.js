@@ -11,8 +11,7 @@ import {
   CardExpiryElement,
   CardCvcElement,
 } from '@stripe/react-stripe-js';
-
-
+import { Link } from 'react-router-dom';
 
 
 const states = [
@@ -57,6 +56,10 @@ function Billing(){
       Your Order was places Successfully. 
       We will notify you when your order is ready for shipping.
       </p>
+      <Link to={'/tea'}>
+        <Button color="secondary" variant="contained">Continue Shopping</Button>
+      </Link>
+     
     </div>
   );
 

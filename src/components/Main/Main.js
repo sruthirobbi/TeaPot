@@ -2,7 +2,6 @@ import React,{ useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import {Drawer,AppBar,Badge,Toolbar,List,CssBaseline,Typography,Divider,IconButton,ListItem,ListItemIcon,ListItemText} from '@material-ui/core';
-// import '@fortawesome/fontawesome-free/css/all.min.css';
 import CircleButton from '../../common/CircleButton/CircleButton';
 import './Main.scss';
 import { Route, Switch } from 'react-router-dom';
@@ -103,6 +102,10 @@ const useStyles = makeStyles((theme) => ({
   logo:{
     textDecoration:"none",
     color:"white"
+  },
+  link:{
+    textDecoration:"none",
+    color:"#ff5c62"
   }
 }));
 
@@ -230,7 +233,7 @@ function Main() {
         <Divider />
         <List>
           {leftMenuData.map((text, index) => (
-            <Link to={text.link} key={text.id} underline="none">
+            <Link to={text.link} key={text.id} underline="none" className={classes.link}>
                 <ListItem button  index={index}>
                     <ListItemIcon>
                         <CircleButton iconName={text.iconName}/>
