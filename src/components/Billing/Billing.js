@@ -56,7 +56,7 @@ function Billing(){
       Your Order was places Successfully. 
       We will notify you when your order is ready for shipping.
       </p>
-      <Link to={'/tea'}>
+      <Link to={'/tea'} className="Billing-Link">
         <Button color="secondary" variant="contained">Continue Shopping</Button>
       </Link>
      
