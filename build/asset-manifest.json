@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/TeaPot/static/css/main.5b41886a.chunk.css",
-    "main.js": "/TeaPot/static/js/main.e2b7cbd0.chunk.js",
-    "main.js.map": "/TeaPot/static/js/main.e2b7cbd0.chunk.js.map",
+    "main.js": "/TeaPot/static/js/main.1fe75cbf.chunk.js",
+    "main.js.map": "/TeaPot/static/js/main.1fe75cbf.chunk.js.map",
     "runtime-main.js": "/TeaPot/static/js/runtime-main.0647e646.js",
     "runtime-main.js.map": "/TeaPot/static/js/runtime-main.0647e646.js.map",
-    "static/js/2.84a3a5ab.chunk.js": "/TeaPot/static/js/2.84a3a5ab.chunk.js",
-    "static/js/2.84a3a5ab.chunk.js.map": "/TeaPot/static/js/2.84a3a5ab.chunk.js.map",
+    "static/js/2.463289e0.chunk.js": "/TeaPot/static/js/2.463289e0.chunk.js",
+    "static/js/2.463289e0.chunk.js.map": "/TeaPot/static/js/2.463289e0.chunk.js.map",
     "index.html": "/TeaPot/index.html",
-    "precache-manifest.ec64046a19d1fa3b2557472b5efb16c5.js": "/TeaPot/precache-manifest.ec64046a19d1fa3b2557472b5efb16c5.js",
+    "precache-manifest.6d231ede41b74ccce0a45174b5b9b0f1.js": "/TeaPot/precache-manifest.6d231ede41b74ccce0a45174b5b9b0f1.js",
     "service-worker.js": "/TeaPot/service-worker.js",
     "static/css/main.5b41886a.chunk.css.map": "/TeaPot/static/css/main.5b41886a.chunk.css.map",
-    "static/js/2.84a3a5ab.chunk.js.LICENSE.txt": "/TeaPot/static/js/2.84a3a5ab.chunk.js.LICENSE.txt",
+    "static/js/2.463289e0.chunk.js.LICENSE.txt": "/TeaPot/static/js/2.463289e0.chunk.js.LICENSE.txt",
     "static/media/HibiscusTea.jpg": "/TeaPot/static/media/HibiscusTea.cb17b476.jpg",
     "static/media/black_tea.jpg": "/TeaPot/static/media/black_tea.1b34f06a.jpg",
     "static/media/img8.jpg": "/TeaPot/static/media/img8.6bc33a1f.jpg",
@@ -30,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0647e646.js",
-    "static/js/2.84a3a5ab.chunk.js",
+    "static/js/2.463289e0.chunk.js",
     "static/css/main.5b41886a.chunk.css",
-    "static/js/main.e2b7cbd0.chunk.js"
+    "static/js/main.1fe75cbf.chunk.js"
   ]
 }
