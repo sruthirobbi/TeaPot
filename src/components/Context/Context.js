@@ -8,12 +8,6 @@ import React,{useReducer} from 'react';
   };
 
 
-  const cartCount = (items = [], id,count) =>{
-    let check = items.some( item => item.id === id);
-        check === true ? count = count : count = count + 1  
-        return count;
-  }
-
   //To Increase Quantity of each item
   const incQuantity = (items = [],payload, id)=>{
     const newItems = items.map(item => item);
@@ -24,13 +18,7 @@ import React,{useReducer} from 'react';
     return newItems
   }
 
-  //To get newCount value when inc and dec the items in the cart
-  const newCount = (items = [],id,count) =>{
-    const newItems = items.map(item => item);
-    newItems.map((e)=>{ return  (e.id === id && (e.quantity === 0 || e.quantity === 1)) ? count = count-1 : ' '
-    });
-    return count
-  }
+
 
   //To decrease the Quantity of the each item and to remove the item if Quantity is 1
   const decQuantity = (items = [],id)=>{
@@ -71,17 +59,18 @@ let reducer = (state, action) => {
     switch (action.type) {
       case "onclick_cart":
         return { ...state,
-            count: cartCount(state.items,action.id,state.count),
+            count: state.count+1,
             items: addItems(state.items, action.product,action.id),
             total: cartTotal(state.items,action.id, action.product)};
       case "onclick_plus":
         return{...state,
+          count:state.count+1,
           items: incQuantity(state.items,action.product,action.id),
           total:incItemsTotal(state.items,action.id,state.total)
         };
       case "onclick_minus":
         return{...state,
-          count: newCount(state.items,action.id,state.count),
+          count: state.count-1,
           items: decQuantity(state.items,action.id),
           total: decItemsTotal(state.items,action.id,state.total)
         };
