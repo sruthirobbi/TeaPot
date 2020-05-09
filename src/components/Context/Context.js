@@ -67,24 +67,29 @@ import React,{useReducer} from 'react';
 
 
 let reducer = (state, action) => {
-  console.log(state)
     switch (action.type) {
       case "onclick_cart":
+        console.log("cart",state)
         return { ...state,
-            count: cartCount(state.items,action.id,state.count),
+            count: state.count+1,
             items: addItems(state.items, action.product,action.id),
             total: cartTotal(state.items,action.id, action.product)};
       case "onclick_plus":
         return{...state,
+          count:state.count+1,
           items: incQuantity(state.items,action.product,action.id),
           total:incItemsTotal(state.items,action.id,state.total)
         };
       case "onclick_minus":
         return{...state,
-          count: newCount(state.items,action.id,state.count),
+          count: state.count-1,
           items: decQuantity(state.items,action.id),
           total: decItemsTotal(state.items,action.id,state.total)
         };
+      case "onclick_quickview":
+        return{...state,
+          items: action.product
+        }
       default:
         return state;
     }

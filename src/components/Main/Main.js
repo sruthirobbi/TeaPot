@@ -233,7 +233,7 @@ function Main() {
         <Divider />
         <List>
           {leftMenuData.map((text, index) => (
-            <Link to={text.link} key={text.id} underline="none" className={classes.link}>
+            <Link to={text.link} key={text.id} underline="none" className={classes.link} >
                 <ListItem button  index={index}>
                     <ListItemIcon>
                         <CircleButton iconName={text.iconName}/>
