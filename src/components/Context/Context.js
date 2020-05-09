@@ -8,12 +8,6 @@ import React,{useReducer} from 'react';
   };
 
 
-  const cartCount = (items = [], id,count) =>{
-    let check = items.some( item => item.id === id);
-        check === true ? count = count : count = count + 1  
-        return count;
-  }
-
   //To Increase Quantity of each item
   const incQuantity = (items = [],payload, id)=>{
     const newItems = items.map(item => item);
@@ -24,13 +18,7 @@ import React,{useReducer} from 'react';
     return newItems
   }
 
-  //To get newCount value when inc and dec the items in the cart
-  const newCount = (items = [],id,count) =>{
-    const newItems = items.map(item => item);
-    newItems.map((e)=>{ return  (e.id === id && (e.quantity === 0 || e.quantity === 1)) ? count = count-1 : ' '
-    });
-    return count
-  }
+
 
   //To decrease the Quantity of the each item and to remove the item if Quantity is 1
   const decQuantity = (items = [],id)=>{
