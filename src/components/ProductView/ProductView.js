@@ -6,8 +6,9 @@ import './ProductView.scss';
 import {CounterContext} from '../Context/Context';
 
 
+
+
 function ProductView(props){
-    console.log(props)
     const { dispatch } = useContext(CounterContext);
  
     return(
@@ -17,7 +18,7 @@ function ProductView(props){
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"
                 >
-                <Grid container  spacing={2}  className="productPaper" style={{width:"68%"}}>
+                <Grid   className="productPaper" >
                     <Grid item xs={12} sm={12} md={6} lg={6} >
                        <img  src={process.env.PUBLIC_URL + `/image/${props.data.img}`} alt="types of Tea" className="productImage"/>
                         

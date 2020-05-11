@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dddfb78a0cc33e18f70984373a76797f",
+    "revision": "7b7f23f7da4eccd6fe3744de091521ab",
     "url": "/TeaPot/index.html"
   },
   {
-    "revision": "aa59940e2bcb4ceb55a0",
-    "url": "/TeaPot/static/css/main.b5445da9.chunk.css"
+    "revision": "482a030007ace5841116",
+    "url": "/TeaPot/static/css/main.a122bdcc.chunk.css"
   },
   {
-    "revision": "6ca5cc82ce8994dce48f",
-    "url": "/TeaPot/static/js/2.463289e0.chunk.js"
+    "revision": "56c0c5b7349cf0f2766e",
+    "url": "/TeaPot/static/js/2.2d0c48fb.chunk.js"
   },
   {
     "revision": "d455b55662ec59e842e850740eeaf3d2",
-    "url": "/TeaPot/static/js/2.463289e0.chunk.js.LICENSE.txt"
+    "url": "/TeaPot/static/js/2.2d0c48fb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aa59940e2bcb4ceb55a0",
-    "url": "/TeaPot/static/js/main.06cbbfff.chunk.js"
+    "revision": "482a030007ace5841116",
+    "url": "/TeaPot/static/js/main.d8c1fd08.chunk.js"
   },
   {
     "revision": "8890ba0a64f7d92cfaa8",
