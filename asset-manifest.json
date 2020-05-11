@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/TeaPot/static/css/main.a122bdcc.chunk.css",
-    "main.js": "/TeaPot/static/js/main.d8c1fd08.chunk.js",
-    "main.js.map": "/TeaPot/static/js/main.d8c1fd08.chunk.js.map",
+    "main.css": "/TeaPot/static/css/main.6bcc9357.chunk.css",
+    "main.js": "/TeaPot/static/js/main.ebccf19e.chunk.js",
+    "main.js.map": "/TeaPot/static/js/main.ebccf19e.chunk.js.map",
     "runtime-main.js": "/TeaPot/static/js/runtime-main.0647e646.js",
     "runtime-main.js.map": "/TeaPot/static/js/runtime-main.0647e646.js.map",
     "static/js/2.2d0c48fb.chunk.js": "/TeaPot/static/js/2.2d0c48fb.chunk.js",
     "static/js/2.2d0c48fb.chunk.js.map": "/TeaPot/static/js/2.2d0c48fb.chunk.js.map",
     "index.html": "/TeaPot/index.html",
-    "precache-manifest.339cebeac71daeb5676a9b55407b0739.js": "/TeaPot/precache-manifest.339cebeac71daeb5676a9b55407b0739.js",
+    "precache-manifest.8dfee10cb06c597783e1439905eed8cb.js": "/TeaPot/precache-manifest.8dfee10cb06c597783e1439905eed8cb.js",
     "service-worker.js": "/TeaPot/service-worker.js",
-    "static/css/main.a122bdcc.chunk.css.map": "/TeaPot/static/css/main.a122bdcc.chunk.css.map",
+    "static/css/main.6bcc9357.chunk.css.map": "/TeaPot/static/css/main.6bcc9357.chunk.css.map",
     "static/js/2.2d0c48fb.chunk.js.LICENSE.txt": "/TeaPot/static/js/2.2d0c48fb.chunk.js.LICENSE.txt",
     "static/media/HibiscusTea.jpg": "/TeaPot/static/media/HibiscusTea.cb17b476.jpg",
     "static/media/black_tea.jpg": "/TeaPot/static/media/black_tea.1b34f06a.jpg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.0647e646.js",
     "static/js/2.2d0c48fb.chunk.js",
-    "static/css/main.a122bdcc.chunk.css",
-    "static/js/main.d8c1fd08.chunk.js"
+    "static/css/main.6bcc9357.chunk.css",
+    "static/js/main.ebccf19e.chunk.js"
   ]
 }
