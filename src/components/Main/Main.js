@@ -254,8 +254,6 @@ function Main() {
             <Route path="/AboutUs" component={AboutUs}/>
             <Route path="/Billing" component={Billing}/>
             <Route path="/ContactUs" component={ContactUs}/>
-            
-
             <Route component={Error}/>
         </Switch>
       </main>

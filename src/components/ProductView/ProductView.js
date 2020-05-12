@@ -4,6 +4,9 @@ import Title from '../../common/Title/Title';
 import TeaSvg from '../../common/TeaSvg/TeaSvg';
 import './ProductView.scss';
 import {CounterContext} from '../Context/Context';
+import {
+    SideBySideMagnifier,
+  } from "react-image-magnifiers";
 
 
 
@@ -20,7 +23,18 @@ function ProductView(props){
                 >
                 <Grid   className="productPaper" >
                     <Grid item xs={12} sm={12} md={6} lg={6} >
-                       <img  src={process.env.PUBLIC_URL + `/image/${props.data.img}`} alt="types of Tea" className="productImage"/>
+                        <div className="container">
+                        <SideBySideMagnifier
+                        imageSrc={process.env.PUBLIC_URL + `/image/${props.data.img}`}
+                        imageAlt="Example"
+                        className="productImage"
+                        alwaysInPlace="false"
+                        />
+                        <div className="overlay"> Hover on Image</div>
+                        </div>
+                    
+                        
+                       {/* <img  src={process.env.PUBLIC_URL + `/image/${props.data.img}`} alt="types of Tea" className="productImage"/> */}
                         
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={6} className="productDetails">
@@ -29,7 +43,7 @@ function ProductView(props){
                             <TeaSvg/>
                         </div>
                         <div className="productText">
-                            <span>Price: $ {props.data.price}</span>
+                            <p>Price: $ {props.data.price}</p>
                             <p>Weight: {props.data.quantity*16} oz</p>
                             <p>{props.data.desc}</p>
                             
